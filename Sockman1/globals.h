@@ -4,10 +4,10 @@
 #define MAX_LOADSTRING 100
 
 // Global Variables:
-HINSTANCE hInstanceSockman;					// current instance
-CHAR szTitle[MAX_LOADSTRING];				// The title bar text
-CHAR szWindowClass[MAX_LOADSTRING];			// the main window class name
+extern HINSTANCE hInstanceSockman;					// current instance
+extern CHAR szTitle[MAX_LOADSTRING];				// The title bar text
+extern CHAR szWindowClass[MAX_LOADSTRING];			// the main window class name
 
-CHAR szPrintBuffer[8192];					// Buffer to print messages to the main window with
+extern CHAR szPrintBuffer[8192];					// Buffer to print messages to the main window with
 
 #endif //__GLOBALS_H__
