@@ -7,6 +7,23 @@
 #include "stdafx.h"
 
 /**
+ * \brief Asks the user a yes/no question with the specified message, and returns the response.
+ * \param pszMessage Message for the user.  Should be phrased as a yes-no question.
+ * \return IDYES if the user clicked the Yes button; IDNO otherwise.
+ */
+int AskQuestion(LPCSTR pszMessage);
+
+/**
+ * \brief Asks the user a yes/no question where 'no' means something other than
+ * cancelling the pending operation.  Such as saving a file before exiting an
+ * application.
+ * \param pszMessage Message for the user.  Should be phrased as a yes/no question.
+ * \return IDYES if the user clicked Yes, IDNO if the user clicked No, and IDCANCEL
+ * otherwise.
+ */
+int AskQuestionWithCancel(LPCSTR pszMessage);
+
+/**
  * \brief Shows an informational message to the user.
  * \param pszMessage The content of the message box.
  * \param pszCaption The caption (title) of the message box.

@@ -2,7 +2,7 @@
 #include "AboutDlg.h"
 #include "Common.h"
 
-INT_PTR CALLBACK OnCommand(HWND hDlg, WPARAM wParam)
+INT_PTR CALLBACK OnDlgCommand(HWND hDlg, WPARAM wParam)
 {
 	const auto nCommand = LOWORD(wParam);
 
@@ -43,7 +43,7 @@ INT_PTR CALLBACK AboutProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam
 		break;
 
 	case WM_COMMAND:
-		result = OnCommand(hDlg, wParam);
+		result = OnDlgCommand(hDlg, wParam);
 		break;
 
 	default:

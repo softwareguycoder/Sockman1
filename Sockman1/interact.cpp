@@ -6,6 +6,44 @@
 #include "interact.h"
 #include <cstdio>
 
+int AskQuestion(LPCSTR pszMessage)
+{
+	auto nResult = -1;
+
+	if (pszMessage == nullptr
+		|| strlen(pszMessage) == 0)
+	{
+		return nResult;
+	}
+
+	nResult = MessageBox(nullptr,
+		pszMessage,
+		szTitle,
+		MB_YESNO | MB_ICONEXCLAMATION
+		| MB_DEFBUTTON2);
+
+	return nResult;
+}
+
+int AskQuestionWithCancel(LPCSTR pszMessage)
+{
+	auto nResult = -1;
+
+	if (pszMessage == nullptr
+		|| strlen(pszMessage) == 0)
+	{
+		return nResult;
+	}
+
+	nResult = MessageBox(nullptr,
+		pszMessage,
+		szTitle,
+		MB_YESNOCANCEL | MB_ICONEXCLAMATION
+		| MB_DEFBUTTON2);
+
+	return nResult;
+}
+
 /**
  * \brief Shows an informational message to the user.
  * \param pszMessage The content of the message box.
