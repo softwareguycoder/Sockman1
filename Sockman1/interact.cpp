@@ -78,7 +78,7 @@ void HandleError()
 		| FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS,
 		nullptr, WSAGetLastError(),
 		MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT),
-		(LPSTR)&s, 0, nullptr);
+		reinterpret_cast<LPSTR>(&s), 0, nullptr);
 
 	ShowStopError(s);
 

@@ -7,6 +7,7 @@
 extern HINSTANCE hInstanceSockman;					// current instance
 extern CHAR szTitle[MAX_LOADSTRING];				// The title bar text
 extern CHAR szWindowClass[MAX_LOADSTRING];			// the main window class name
+extern HWND hWndMain;								// Handle to the main window
 
 extern CHAR szPrintBuffer[8192];					// Buffer to print messages to the main window with
 
